@@ -1,0 +1,12 @@
+{
+  "frontend/src/App.tsx": "Main application component that sets up the theme provider and renders the header, Valentine proposal screen, and footer with a Valentine's Day themed layout.",
+  "frontend/src/components/Header.tsx": "Navigation header component displaying the Valentine Vibes logo, title, and authentication controls for connecting/disconnecting Internet Identity.",
+  "frontend/src/components/Hero.tsx": "Hero banner section displaying the Valentine's Day themed banner image with an overlay containing the main tagline and description.",
+  "frontend/src/components/MessageSection.tsx": "Main interactive section allowing authenticated users to write, save, and view romantic messages with real-time message count display.",
+  "frontend/src/components/Footer.tsx": "Footer component with copyright notice and attribution link to caffeine.ai, styled with Valentine's Day theme.",
+  "frontend/src/hooks/useQueries.ts": "Custom React Query hooks for fetching user messages, message count, and adding new messages to the backend with automatic cache invalidation.",
+  "frontend/src/index.css": "Global styles with OKLCH color system customized for Valentine's Day theme featuring romantic pink and red tones for both light and dark modes.",
+  "frontend/index.html": "HTML entry point with personalized title and meta description for the Keya Valentine proposal experience.",
+  "frontend/src/components/ValentineProposal.tsx": "Interactive Valentine's Day proposal component with a teaser screen showing \"Click here for a surprise\" that reveals the personalized \"Will you be my Valentine, Keya?\" question with Yes/No buttons, playful rejection messages, button movement mechanics, success celebration, and integrated ShareSection.",
+  "frontend/src/components/ShareSection.tsx": "A share component that provides Copy Link and Copy Message buttons with visible confirmation feedback, copying a message that references clicking the link for a surprise along with the Valentine proposal URL."
+}

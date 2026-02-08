@@ -1,0 +1,72 @@
+{
+  "kind": "build_request",
+  "title": "Add teaser link screen before showing the Valentine question",
+  "priority": "normal",
+  "requirements": [
+    {
+      "id": "REQ-1",
+      "text": "Change the recipient flow so the page initially shows a single prominent link-style call-to-action reading exactly \"Click here for a surprise\" instead of immediately showing the \"Will you be my Valentine, Keya?\" question.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-1"
+        ],
+        "quotes": [
+          "Can you replace that text where it says click here for a surprise"
+        ]
+      },
+      "acceptanceCriteria": [
+        "On first page load, the Valentine question and Yes/No buttons are not visible.",
+        "The initial screen prominently displays the exact text: \"Click here for a surprise\".",
+        "The initial call-to-action is keyboard accessible (can be activated via Enter/Space) and clearly indicates it is clickable."
+      ]
+    },
+    {
+      "id": "REQ-2",
+      "text": "When the recipient clicks/taps \"Click here for a surprise\", transition the UI to display the existing Valentine proposal question \"Will you be my Valentine, Keya?\" along with the existing Yes/No interactions and animations.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-1"
+        ],
+        "quotes": [
+          "whenever she clicks the link it asked the question will you be my valentine?"
+        ]
+      },
+      "acceptanceCriteria": [
+        "After clicking/tapping the teaser link, the Valentine proposal card appears with the existing question text and Yes/No buttons.",
+        "The existing playful \"No\" behavior continues to work as it does now (random messages, movement after threshold).",
+        "The existing \"Yes\" acceptance state and heart animation still work."
+      ]
+    },
+    {
+      "id": "REQ-3",
+      "text": "Ensure the Share section remains available in the proposal experience (after the teaser is clicked) and continues to copy the current URL and a prefilled English message.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-1"
+        ]
+      },
+      "acceptanceCriteria": [
+        "After revealing the proposal, the Share section is visible and functional.",
+        "Copy Link continues to copy the current page URL.",
+        "Copy Message continues to copy an English message including the existing wording about clicking the link for a surprise."
+      ]
+    }
+  ],
+  "constraints": [
+    "Do not modify files under frontend/src/components/ui (read-only shadcn components).",
+    "Do not modify files listed in frontend.immutablePaths (Internet Identity and actor hooks, main entry).",
+    "Keep the backend as a single Motoko actor; no backend changes are required for this request."
+  ],
+  "nonGoals": [
+    "Do not add new authentication providers beyond Internet Identity.",
+    "Do not add a separate backend feature or storage for tracking whether the teaser was clicked.",
+    "Do not redesign the overall Valentine proposal interactions beyond adding the teaser-to-proposal transition."
+  ],
+  "imageRequirements": {
+    "required": [],
+    "edits": []
+  }
+}

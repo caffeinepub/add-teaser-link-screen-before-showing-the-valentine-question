@@ -1,0 +1,21 @@
+{
+  "backend/main.mo": "Motoko canister actor that stores one text message per user principal using a Map, with methods to add a message, retrieve a user’s message, check existence, and get total message count.",
+  "feature_evidence.json": "Machine-readable report documenting implemented frontend features, mapping feature IDs and titles to affected files, components, test IDs, and confidence levels.",
+  "frontend-file-summaries.txt": "Prewritten JSON-style map summarizing the purpose of key frontend source files and components for documentation or planning reference.",
+  "frontend/index.css": "Global Tailwind CSS configuration defining OKLCH color variables and theming for light and dark Valentine-themed UI styles.",
+  "frontend/index.html": "HTML entry point that sets the page metadata, title, and mounts the React app at the root element.",
+  "frontend/src/App.tsx": "Root React component that sets up theming, global layout, header, Valentine proposal content, footer, and toast notifications.",
+  "frontend/src/components/Footer.tsx": "Footer component displaying copyright information with a heart icon and attribution link, styled for the Valentine theme.",
+  "frontend/src/components/Header.tsx": "Sticky navigation header showing branding and Internet Identity connect/disconnect controls based on authentication state.",
+  "frontend/src/components/Hero.tsx": "Hero banner component displaying a Valentine-themed image with overlay text encouraging users to share love messages.",
+  "frontend/src/components/MessageSection.tsx": "Authenticated interaction area where users can write and submit a love message, view their saved message, and see the global message count via backend queries.",
+  "frontend/src/components/ShareSection.tsx": "Reusable share card that lets users copy the current page URL or a prefilled surprise message to the clipboard with visual feedback.",
+  "frontend/src/components/ValentineProposal.tsx": "Implements the interactive Valentine proposal UI with a teaser screen, Yes/No buttons, playful No button avoidance behavior, heart animations, and an embedded ShareSection.",
+  "frontend/src/hooks/useActor.ts": "Provides a React Query-powered hook that creates and caches an ICP backend actor, switching between anonymous and authenticated identities and invalidating dependent queries on change.",
+  "frontend/src/hooks/useInternetIdentity.ts": "Defines an Internet Identity context and provider handling authentication state, login/logout flows, identity persistence, and status helpers using DFINITY AuthClient.",
+  "frontend/src/hooks/useQueries.ts": "Contains React Query hooks for fetching and mutating backend message data (get message, message count, add message) using the ICP actor and authenticated principal.",
+  "frontend/src/index.css": "Sets up Tailwind base styles and defines extensive CSS variables for a Valentine-themed light and dark color palette applied across the app.",
+  "frontend/src/main.tsx": "Bootstraps the React application, wrapping App with React Query and Internet Identity providers and importing global styles.",
+  "frontend/tailwind.config.js": "Configures Tailwind CSS with dark mode, content paths, custom container sizing, extended color tokens tied to CSS variables, animations, and plugins.",
+  "project_state.json": "Tracks high-level project state, implemented features, and feature change requests for the Valentine proposal website backed by an ICP canister."
+}

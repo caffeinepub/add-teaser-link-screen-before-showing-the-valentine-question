@@ -1,0 +1,62 @@
+{
+  "kind": "coverage_report",
+  "version": "1.0",
+  "generatedAt": "2026-02-04T01:04:31.376Z",
+  "sources": {
+    "buildRequest": true,
+    "implementationPlan": true
+  },
+  "requirements": {
+    "total": 3,
+    "implemented": 3,
+    "items": [
+      {
+        "id": "REQ-1",
+        "summary": "Change the recipient flow so the page initially shows a single prominent link-style call-to-action reading exactly \"Click here for a surprise\" instead of immediately showing the \"Will you be my Valentine, Keya?\" question.",
+        "status": "implemented",
+        "plannedFiles": [
+          "frontend/src/components/ValentineProposal.tsx"
+        ],
+        "matchedFiles": [
+          "frontend/src/components/ValentineProposal.tsx"
+        ]
+      },
+      {
+        "id": "REQ-2",
+        "summary": "When the recipient clicks/taps \"Click here for a surprise\", transition the UI to display the existing Valentine proposal question \"Will you be my Valentine, Keya?\" along with the existing Yes/No interactions and animations.",
+        "status": "implemented",
+        "plannedFiles": [
+          "frontend/src/components/ValentineProposal.tsx"
+        ],
+        "matchedFiles": [
+          "frontend/src/components/ValentineProposal.tsx"
+        ]
+      },
+      {
+        "id": "REQ-3",
+        "summary": "Ensure the Share section remains available in the proposal experience (after the teaser is clicked) and continues to copy the current URL and a prefilled English message.",
+        "status": "implemented",
+        "plannedFiles": [
+          "frontend/src/components/ValentineProposal.tsx",
+          "frontend/src/components/ShareSection.tsx"
+        ],
+        "matchedFiles": [
+          "frontend/src/components/ValentineProposal.tsx",
+          "frontend/src/components/ShareSection.tsx"
+        ]
+      }
+    ]
+  },
+  "changedFiles": [
+    "build-request.json",
+    "feature_evidence.json",
+    "frontend-file-summaries.txt",
+    "frontend-implementation-plan.json",
+    "frontend/src/components/ShareSection.tsx",
+    "frontend/src/components/ValentineProposal.tsx",
+    "project_state.json",
+    "scratch/component-selection.json",
+    "spec.md",
+    "spec_vs_diff_report.json"
+  ]
+}

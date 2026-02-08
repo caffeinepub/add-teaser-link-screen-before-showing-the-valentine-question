@@ -1,0 +1,25 @@
+{
+  "kind": "spec_vs_diff_report",
+  "version": "1.0",
+  "generatedAt": "2026-02-04T01:04:31.335Z",
+  "summary": "Diff adds a teaser/reveal state to ValentineProposal and updates ShareSection clipboard behavior and message text. Some core requirements appear implemented, but the diff truncation prevents verifying the exact teaser CTA text rendering from code.",
+  "missing_requirements": [
+    {
+      "id": "REQ-1",
+      "requirement": "Initial screen prominently displays the exact text \"Click here for a surprise\" (and not the Valentine question/Yes/No) on first load.",
+      "reason": "ValentineProposal.tsx is truncated before showing the Button’s children/label text, so the diff summary does not provide direct code evidence that the CTA renders the exact required string. The component-level summary mentions it, but the actual rendered text is not visible in the provided code excerpt.",
+      "evidence": [
+        "frontend/src/components/ValentineProposal.tsx (truncated)",
+        "frontend-file-summaries.txt"
+      ]
+    }
+  ],
+  "hallucinated_features": [],
+  "confidence": 0.6,
+  "changed_files": [
+    "frontend-file-summaries.txt",
+    "frontend/src/components/ShareSection.tsx",
+    "frontend/src/components/ValentineProposal.tsx",
+    "project_state.json"
+  ]
+}

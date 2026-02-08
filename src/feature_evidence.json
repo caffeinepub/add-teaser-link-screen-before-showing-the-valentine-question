@@ -1,0 +1,60 @@
+{
+  "kind": "feature_evidence_report",
+  "features": [
+    {
+      "featureId": "feature-change-the-recipient-flow-so-the-page-initially-shows-a-single-prominent-link-style-call-to-action-reading-exactly-click-here-for-a-surprise-instead-of-immediately-showing-the-will-you-be-my-valentine-keya-question",
+      "featureTitle": "Change the recipient flow so the page initially shows a single prominent link-style call-to-action reading exactly \"Click here for a surprise\" instead of immediately showing the \"Will you be my Valentine, Keya?\" question.",
+      "files": [
+        "frontend/src/components/ValentineProposal.tsx"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-1"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-when-the-recipient-clicks-taps-click-here-for-a-surprise-transition-the-ui-to-display-the-existing-valentine-proposal-question-will-you-be-my-valentine-keya-along-with-the-existing-yes-no-interactions-and-animations",
+      "featureTitle": "When the recipient clicks/taps \"Click here for a surprise\", transition the UI to display the existing Valentine proposal question \"Will you be my Valentine, Keya?\" along with the existing Yes/No interactions and animations.",
+      "files": [
+        "frontend/src/components/ValentineProposal.tsx"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-2"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-ensure-the-share-section-remains-available-in-the-proposal-experience-after-the-teaser-is-clicked-and-continues-to-copy-the-current-url-and-a-prefilled-english-message",
+      "featureTitle": "Ensure the Share section remains available in the proposal experience (after the teaser is clicked) and continues to copy the current URL and a prefilled English message.",
+      "files": [
+        "frontend/src/components/ShareSection.tsx",
+        "frontend/src/components/ValentineProposal.tsx"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-3"
+      ],
+      "confidence": "high"
+    }
+  ]
+}

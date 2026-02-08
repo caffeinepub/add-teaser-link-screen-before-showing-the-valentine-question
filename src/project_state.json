@@ -1,0 +1,102 @@
+{
+  "schemaVersion": "1.0.0",
+  "projectStateVersion": 12,
+  "summary": "Create a Valentine proposal-style website (similar to the provided URL) with customizable branding and shareable message/proposal interactions backed by an ICP Motoko canister.",
+  "existing_features": [
+    {
+      "id": "IF-1",
+      "title": "Website scaffold with configurable site name/branding",
+      "synonyms": [
+        "Configurable branding",
+        "Replaceable site name",
+        "Branding settings"
+      ],
+      "description": "Implemented a React/Vite frontend with page layout components (Header, Hero, Footer, LandingPage) and an AdminPanel to manage branding. Branding is centralized in frontend config (e.g., config/branding and useSiteBranding hook) so the site name/branding can be changed/replaced without reworking the page structure.",
+      "reqIds": [
+        "AR-1"
+      ],
+      "version": 1
+    },
+    {
+      "id": "IF-2",
+      "title": "Valentine proposal interactive landing experience",
+      "synonyms": [
+        "ValentineProposal UI",
+        "Proposal flow",
+        "Interactive proposal page"
+      ],
+      "description": "Implemented dedicated Valentine proposal UI components (e.g., ValentineProposal, Hero, MessageSection) composing an interactive landing/proposal experience within the React/Vite/Tailwind frontend.",
+      "reqIds": [],
+      "version": 1
+    },
+    {
+      "id": "IF-3",
+      "title": "Shareable message/proposal content via backend storage",
+      "synonyms": [
+        "ShareSection",
+        "Message sharing",
+        "Persisted messages"
+      ],
+      "description": "Added sharing and message functionality (e.g., ShareSection, StorageClient, backend canister updates) to persist and retrieve proposal/message data via the Motoko backend and frontend backend actor bindings.",
+      "reqIds": [],
+      "version": 1
+    },
+    {
+      "id": "IF-4",
+      "title": "ICP actor + Internet Identity authentication hooks integrated",
+      "synonyms": [
+        "useActor",
+        "useInternetIdentity",
+        "Auth scaffold"
+      ],
+      "description": "Frontend includes and wires ICP actor/authentication hooks (useActor, useInternetIdentity, query hooks) to support authenticated interactions with the backend canister.",
+      "reqIds": [],
+      "version": 1
+    },
+    {
+      "id": "feature-change-the-recipient-flow-so-the-page-initially-shows-a-single-prominent-link-style-call-to-action-reading-exactly-click-here-for-a-surprise-instead-of-immediately-showing-the-will-you-be-my-valentine-keya-question",
+      "title": "Change the recipient flow so the page initially shows a single prominent link-style call-to-action reading exactly \"Click here for a surprise\" instead of immediately showing the \"Will you be my Valentine, Keya?\" question.",
+      "reqIds": [
+        "REQ-1"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-when-the-recipient-clicks-taps-click-here-for-a-surprise-transition-the-ui-to-display-the-existing-valentine-proposal-question-will-you-be-my-valentine-keya-along-with-the-existing-yes-no-interactions-and-animations",
+      "title": "When the recipient clicks/taps \"Click here for a surprise\", transition the UI to display the existing Valentine proposal question \"Will you be my Valentine, Keya?\" along with the existing Yes/No interactions and animations.",
+      "reqIds": [
+        "REQ-2"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-ensure-the-share-section-remains-available-in-the-proposal-experience-after-the-teaser-is-clicked-and-continues-to-copy-the-current-url-and-a-prefilled-english-message",
+      "title": "Ensure the Share section remains available in the proposal experience (after the teaser is clicked) and continues to copy the current URL and a prefilled English message.",
+      "reqIds": [
+        "REQ-3"
+      ],
+      "version": 1
+    }
+  ],
+  "new_feature_requests": [
+    {
+      "id": "AR-1",
+      "summary": "Change the share/landing link text to 'Click here for a surprise' and only show the 'Will you be my Valentine?' question after the link is clicked (transition to the question view/page).",
+      "reqIds": [],
+      "status": "pending"
+    }
+  ],
+  "architectural_notes": [
+    "Frontend implemented with React + Vite + Tailwind and shadcn/ui component set.",
+    "Branding configuration is centralized (frontend/src/config/branding.ts) and accessed via a dedicated hook (useSiteBranding) for consistent site-name/branding replacement across the UI.",
+    "Backend canister uses Motoko; frontend includes actor/auth hooks (useActor, useInternetIdentity) suggesting Internet Identity integration is wired into the app scaffold.",
+    "Frontend now includes a Valentine proposal-specific component set (ValentineProposal, MessageSection, ShareSection) layered on top of the base layout.",
+    "Frontend integrates a storage client and backend actor bindings to persist/share proposal messages through the Motoko canister.",
+    "Build template and project scaffolding were significantly expanded/standardized (build-template assets, scripts, configs) to support reproducible builds/deployments."
+  ],
+  "known_issues": [],
+  "isFixRequest": false,
+  "projectName": "Add teaser link screen before showing the Valentine question",
+  "clarification_mode": "instant",
+  "clarification_rounds": 0
+}

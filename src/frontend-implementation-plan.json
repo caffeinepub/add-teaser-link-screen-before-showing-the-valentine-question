@@ -1,0 +1,60 @@
+{
+  "kind": "implementation_plan",
+  "version": "1.0",
+  "title": "Teaser CTA screen before Valentine proposal",
+  "requirements": [
+    {
+      "id": "REQ-1",
+      "summary": "Add an initial teaser screen that shows only a prominent link-style call-to-action labeled exactly \"Click here for a surprise\" before revealing the proposal UI.",
+      "acceptanceCriteria": [
+        "On first page load, the Valentine question and Yes/No buttons are not visible.",
+        "The initial screen prominently displays the exact text: \"Click here for a surprise\".",
+        "The initial call-to-action is keyboard accessible (can be activated via Enter/Space) and clearly indicates it is clickable."
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/components/ValentineProposal.tsx",
+          "operation": "modify",
+          "description": "Introduce a local \"revealed\" (or similar) UI state so the component initially renders only a centered, prominent link-style Button whose visible label is exactly \"Click here for a surprise\"; ensure it is rendered as a semantic <button> (keyboard-activatable by default) and visually indicates clickability (e.g., underline/link styling) while keeping the proposal card and interactions hidden until revealed. Verify the component's usage instructions before implementing."
+        }
+      ]
+    },
+    {
+      "id": "REQ-2",
+      "summary": "On teaser activation, transition to the existing Valentine proposal experience with the current question, Yes/No behavior, and animations unchanged.",
+      "acceptanceCriteria": [
+        "After clicking/tapping the teaser link, the Valentine proposal card appears with the existing question text and Yes/No buttons.",
+        "The existing playful \"No\" behavior continues to work as it does now (random messages, movement after threshold).",
+        "The existing \"Yes\" acceptance state and heart animation still work."
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/components/ValentineProposal.tsx",
+          "operation": "modify",
+          "description": "Wire the teaser CTA onClick to switch into the existing proposal rendering path, preserving current state logic for accepted/noClickCount/noMessage/no movement and the heart animation; add only a light UI transition (e.g., opacity/scale via Tailwind classes) around conditional rendering so the experience feels like a reveal without changing the existing proposal behaviors. Verify the component's usage instructions before implementing."
+        }
+      ]
+    },
+    {
+      "id": "REQ-3",
+      "summary": "Keep the Share section available and functional after the teaser is revealed, continuing to copy the current URL and a prefilled English message referencing the surprise link.",
+      "acceptanceCriteria": [
+        "After revealing the proposal, the Share section is visible and functional.",
+        "Copy Link continues to copy the current page URL.",
+        "Copy Message continues to copy an English message including the existing wording about clicking the link for a surprise."
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/components/ValentineProposal.tsx",
+          "operation": "modify",
+          "description": "Conditionally render <ShareSection /> only within the revealed proposal experience (i.e., not on the initial teaser-only screen), ensuring it remains present and reachable once the proposal UI is shown. Verify the component's usage instructions before implementing."
+        },
+        {
+          "path": "frontend/src/components/ShareSection.tsx",
+          "operation": "modify",
+          "description": "Ensure the prefilled copied message remains in English and explicitly includes the existing wording about clicking the link for a surprise, while continuing to copy window.location.href for the URL and keeping the current clipboard/fallback behavior intact. Verify the component's usage instructions before implementing."
+        }
+      ]
+    }
+  ]
+}

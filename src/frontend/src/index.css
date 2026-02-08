@@ -1,0 +1,85 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    :root {
+        --radius: 0.75rem;
+        /* Valentine's Day Light Theme - Romantic Pinks & Reds */
+        --background: 0.98 0.015 15;
+        --foreground: 0.25 0.02 15;
+        --card: 1 0.01 15;
+        --card-foreground: 0.25 0.02 15;
+        --popover: 1 0.01 15;
+        --popover-foreground: 0.25 0.02 15;
+        --primary: 0.58 0.21 15;
+        --primary-foreground: 0.99 0.01 15;
+        --secondary: 0.96 0.025 15;
+        --secondary-foreground: 0.35 0.02 15;
+        --muted: 0.96 0.02 15;
+        --muted-foreground: 0.55 0.015 15;
+        --accent: 0.94 0.03 350;
+        --accent-foreground: 0.35 0.02 15;
+        --destructive: 0.577 0.245 27.325;
+        --destructive-foreground: 0.985 0.01 15;
+        --border: 0.92 0.02 15;
+        --input: 0.92 0.02 15;
+        --ring: 0.58 0.21 15;
+        --chart-1: 0.65 0.22 15;
+        --chart-2: 0.70 0.18 350;
+        --chart-3: 0.55 0.25 5;
+        --chart-4: 0.75 0.15 340;
+        --chart-5: 0.60 0.20 25;
+        --sidebar: 0.99 0.01 15;
+        --sidebar-foreground: 0.25 0.02 15;
+        --sidebar-primary: 0.58 0.21 15;
+        --sidebar-primary-foreground: 0.99 0.01 15;
+        --sidebar-accent: 0.96 0.025 15;
+        --sidebar-accent-foreground: 0.35 0.02 15;
+        --sidebar-border: 0.92 0.02 15;
+        --sidebar-ring: 0.58 0.21 15;
+    }
+
+    .dark {
+        /* Valentine's Day Dark Theme - Deep Romantic Tones */
+        --background: 0.15 0.03 15;
+        --foreground: 0.95 0.015 15;
+        --card: 0.20 0.035 15;
+        --card-foreground: 0.95 0.015 15;
+        --popover: 0.22 0.04 15;
+        --popover-foreground: 0.95 0.015 15;
+        --primary: 0.75 0.18 15;
+        --primary-foreground: 0.20 0.035 15;
+        --secondary: 0.25 0.04 15;
+        --secondary-foreground: 0.95 0.015 15;
+        --muted: 0.28 0.04 15;
+        --muted-foreground: 0.65 0.02 15;
+        --accent: 0.35 0.05 350;
+        --accent-foreground: 0.95 0.015 15;
+        --destructive: 0.65 0.22 27;
+        --destructive-foreground: 0.95 0.015 15;
+        --border: 0.30 0.04 15;
+        --input: 0.30 0.04 15;
+        --ring: 0.60 0.18 15;
+        --chart-1: 0.55 0.20 350;
+        --chart-2: 0.65 0.16 15;
+        --chart-3: 0.70 0.18 340;
+        --chart-4: 0.60 0.22 5;
+        --chart-5: 0.58 0.19 25;
+        --sidebar: 0.18 0.035 15;
+        --sidebar-foreground: 0.95 0.015 15;
+        --sidebar-primary: 0.55 0.20 350;
+        --sidebar-primary-foreground: 0.95 0.015 15;
+        --sidebar-accent: 0.25 0.04 15;
+        --sidebar-accent-foreground: 0.95 0.015 15;
+        --sidebar-border: 0.30 0.04 15;
+        --sidebar-ring: 0.50 0.15 15;
+    }
+
+    * {
+        @apply border-border;
+    }
+    body {
+        @apply bg-background text-foreground;
+    }
+}
